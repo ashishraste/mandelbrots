@@ -23,12 +23,12 @@ for y in range(image_height):
 		Z = Zx + Zy * 1j	
 		c = Z
 		for n in range(maxIterations):	# Iterating for a certain number of times and checking whether |Z| > 2. If so, it will jump to infinity and hence we quit the iterations for a pixel corresponding to (x,y)			
-			if abs(Z) > 4.0: break							
+			if abs(Z) > 2.0: break							
 			Z = Z * Z + c 				# if (x,y) is inside, then for the next iteration, Zn+1 = Zn^2 + C					
-		R = n % 4 * 64
-		G = n % 8 * 32
-		B = n % 16 * 16
-		image.putpixel((x, y), B*65536 + G*256 + R)
+		R = n % 4 * 128
+		G = n % 8 * 64
+		B = n % 16 * 32
+		image.putpixel((x, y), B*32768 + G*128 + R*8)
 
 image.save("mandelbrot_fractal.png", "PNG")
 print "mandelbrot_fractal created, Sayo nara.."
