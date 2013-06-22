@@ -8,7 +8,7 @@ Min_Re = -2.0
 Max_Re = 1.0
 Min_Im = -1.5
 Max_Im = 1.5
-maxIterations = 2000
+maxIterations = 1000
 
 #width, height = image.size 	# width and height of the rectangle, in which we are going to plot our Mandelbrot set, are equal to the image widht and height
 
@@ -29,11 +29,10 @@ for y in range(image_height):
 		R = n % 4 * 512
 		G = n % 8 * 256
 		B = n % 16 * 64
-		image.putpixel((x, y), B*32768 + G*1024 + R*256)
+		image.putpixel((x, y), B*32768 + G*128 + R*8)
 
 image.save("mandelbrot_fractal.png", "PNG")
 print "mandelbrot_fractal created, Sayo nara.."
-
 
 
 
