@@ -8,7 +8,7 @@ Min_Re = -2.0
 Max_Re = 1.0
 Min_Im = -1.5
 Max_Im = 1.5
-maxIterations = 1000
+maxIterations = 2000
 
 #width, height = image.size 	# width and height of the rectangle, in which we are going to plot our Mandelbrot set, are equal to the image widht and height
 
@@ -23,15 +23,17 @@ for y in range(image_height):
 		Z = Zx + Zy * 1j	
 		c = Z
 		for n in range(maxIterations):	# Iterating for a certain number of times and checking whether |Z| > 2. If so, it will jump to infinity and hence we quit the iterations for a pixel corresponding to (x,y)			
-			if abs(Z) > 2.0: break							
+			if abs(Z) > 2.0: 
+				break							
 			Z = Z * Z + c 				# if (x,y) is inside, then for the next iteration, Zn+1 = Zn^2 + C					
-		R = n % 4 * 128
-		G = n % 8 * 64
-		B = n % 16 * 32
-		image.putpixel((x, y), B*32768 + G*128 + R*8)
+		R = n % 4 * 512
+		G = n % 8 * 256
+		B = n % 16 * 64
+		image.putpixel((x, y), B*32768 + G*1024 + R*256)
 
 image.save("mandelbrot_fractal.png", "PNG")
 print "mandelbrot_fractal created, Sayo nara.."
+
 
 
 
