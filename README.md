@@ -10,11 +10,13 @@ mandelbrots
 3.  Just learnt that the equation in point 1. is a quadratic one. For a 4-dimensional Mandelbrot set, we need a cubic equation with the same logic. Shall test it soon.
 
 
+
 ### Notes
 ---------
-Following recipes need to be covered soon.
-1. 4-dimensional Mandelbrot fractal 
-2. Julia set and its fractal images
+Following recipes need to be covered soon. <br/>
+ 1. 4-dimensional Mandelbrot fractal <br/>
+ 2. Julia set and its fractal images
+
 
 
 
