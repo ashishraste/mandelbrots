@@ -33,12 +33,3 @@ for y in range(image_height):
 
 image.save("mandelbrot_fractal.png", "PNG")
 print "mandelbrot_fractal created, Sayo nara.."
-
-
-
-
-
-
-
-
-
